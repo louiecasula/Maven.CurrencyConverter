@@ -1,5 +1,7 @@
 package io.zipcoder.currencyconverterapplication;
 
+import io.zipcoder.currencyconverterapplication.currencies.*;
+
 public enum CurrencyType {
     AUSTRALIAN_DOLLAR(2.70),
     CANADIAN_DOLLAR(2.64),
@@ -25,6 +27,42 @@ public enum CurrencyType {
     }
 
     public static CurrencyType getTypeOfCurrency(ConvertableCurrency currency) {
+        if (currency instanceof AustralianDollar){
+            return CurrencyType.AUSTRALIAN_DOLLAR;
+        }
+        if (currency instanceof CanadianDollar){
+            return CurrencyType.CANADIAN_DOLLAR;
+        }
+        if (currency instanceof ChineseYR){
+            return CurrencyType.CHINESE_YR;
+        }
+        if (currency instanceof Euro){
+            return CurrencyType.EURO;
+        }
+        if (currency instanceof Franc){
+            return CurrencyType.FRANC;
+        }
+        if (currency instanceof Pound){
+            return CurrencyType.POUND;
+        }
+        if (currency instanceof Ringgit){
+            return CurrencyType.RINGGIT;
+        }
+        if (currency instanceof Rupee){
+            return CurrencyType.RUPEE;
+        }
+        if (currency instanceof SingaporeDollar){
+            return CurrencyType.SINGAPORE_DOLLAR;
+        }
+        if (currency instanceof UniversalCurrency){
+            return CurrencyType.UNIVERSAL_CURRENCY;
+        }
+        if (currency instanceof USDollar){
+            return CurrencyType.US_DOLLAR;
+        }
+        if (currency instanceof Yen){
+            return CurrencyType.YEN;
+        }
         return null;
     }
 }
